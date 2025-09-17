@@ -270,7 +270,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: 90
-  distance: 5
+  distance: 15
+  focus: {fileID: 426382923}
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
