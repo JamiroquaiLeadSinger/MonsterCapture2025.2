@@ -28,10 +28,21 @@ public class PatrolState : iState
     {
         ai.transform.rotation *= Quaternion.Euler(0f, 50 * Time.deltaTime, 0f);
 
-        if(owner.IsFacingPlayer())
+        if(owner.IsFacing(player))
         {
             // Transition into chase state
             owner.stateMachine.ChangeState(owner.chasingState);
+        }
+
+        foreach(var obj in GameObject.FindObjectsByType<GameObject>(FindObjectsSortMode.None))
+        {
+            if(obj.TryGetComponent<iFood>(out iFood food))
+            {
+                if (owner.IsFacing(obj))
+                {
+
+                }
+            }
         }
     }
 

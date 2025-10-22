@@ -25,12 +25,12 @@ public class EnemyJumper : MonoBehaviour
         stateMachine.UpdateSM();
     }
 
-    public bool IsFacingPlayer()
+    public bool IsFacing(GameObject thing)
     {
-        Vector3 directionToPlayer = player.transform.position - transform.forward;
-        directionToPlayer.Normalize();
+        Vector3 directionTo = thing.transform.position - transform.position;
+        directionTo.Normalize();
 
-        float dotResult = Vector3.Dot(directionToPlayer, transform.forward);
+        float dotResult = Vector3.Dot(directionTo, transform.forward);
         return dotResult >= 0.8f;
     }
 }
