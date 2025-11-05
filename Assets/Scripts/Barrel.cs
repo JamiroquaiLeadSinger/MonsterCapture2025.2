@@ -7,8 +7,8 @@ public class Barrel : MonoBehaviour, iTrappable
 
     public bool CaptureAnimation()
     {
-        float wave = Mathf.Lerp();
-        transform.localScale = new Vector3(wave, wave, wave);
+        //float wave = Mathf.Lerp();
+        //transform.localScale = new Vector3(wave, wave, wave);
         return true;
     }
 
